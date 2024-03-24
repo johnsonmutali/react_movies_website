@@ -1,0 +1,243 @@
+.about {
+  --_accent-color: hsl(163 47% 63% / 1);
+  --padding: clamp(5rem, 20vw, 20vw);
+  padding-inline: var(--padding);
+}
+
+.text-area {
+  
+  .subtitle {
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--_accent-color);
+  }
+  
+  .title {
+    font-size: 3em;
+    font-weight: 550;
+    text-transform: capitalize;
+    letter-spacing: 2;
+    line-height: 1;
+    position: relative;
+    margin-block: 1rem;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  
+  .text {
+    line-height: 1.6;
+    font-weight: 450;
+    font-size: .3em;
+    margin-block-end: .9rem;
+  }
+  
+  .graphics {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding-block: .5rem;
+  }
+}
+
+.main {
+  min-block-size: 100svh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  .text-area {
+    max-inline-size: 35vw;
+    display: block;
+    margin-inline-start: auto;
+    /* margin-inline-end: 6rem; */
+  }
+  
+  .graphics {
+    color: var(--_accent-color);
+  }
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  background-image: linear-gradient(to right, #1f1f1f, hsl(163 47% 53% / .75));
+  padding: 3.5rem;
+  inline-size: 100vw;
+  margin-inline-start: calc(var(--padding) * -1);
+  /* transform: translateX(); */
+  
+  .tools__icon {
+    font-size: 4.5rem;
+    color: #f4f4f4;
+  }
+}
+
+.services {
+  min-block-size: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: clamp(6rem, 7.5vh, 10rem); */
+  
+  .text-area {
+    position: relative;
+    inline-size: 100%;
+    /* margin-inline: auto; */
+    text-align: center;
+    
+    .text {
+      max-inline-size: 40vw;
+      display: block;
+      margin-inline: auto;
+      margin-block-end: 3rem;
+    }
+    
+    .graphics {
+      justify-content: space-between;
+      gap: 1rem;
+      
+      .card {
+        padding: 2rem;
+        flex: 100% 1 1;
+        max-inline-size: 30rem;
+        aspect-ratio: 1.689;
+        
+        &:nth-child(odd) {
+          background-image: linear-gradient(to bottom, #000, hsl(163 47% 53% / .75));
+          transform: translateY(1.5rem);
+        }
+        
+        &:nth-child(even) {
+          background-color: #1c1c1c;
+        }
+        
+        .icon {
+          font-size: 2.5rem;
+          color: var(--_accent-color);
+        }
+        
+        .card__title {
+          font-size: .95em;
+          text-transform: capitalize;
+          letter-spacing: 2px;
+          font-weight: 900;
+          padding-block: .5rem;
+          white-space: nowrap;
+        }
+        
+        .card__text {
+          font-size: .5em;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  min-block-size: 100svh;
+  padding-block-end: 7vmin;
+  
+  .text-area {
+    max-inline-size: 60vw;
+    padding-block: 6rem;
+    text-align: center;
+    /* margin-inline: auto; */
+    
+    .text {
+      max-inline-size: 50vw;
+      text-align: center;
+      display: block;
+      margin-inline: auto;
+      margin-block-end: 3rem;
+    }
+    
+    
+    .graphics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    
+    .member-card {
+      display: flex;
+      align-items: stretch;
+      inline-size: minmax(15rem, 30rem);
+      aspect-ratio: 3 / 1;
+      
+      
+      &:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+      
+      &:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      
+      &:nth-child(3) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      
+      &:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+      
+      .member-card__dp {
+        flex: 50% 1 1;
+      }
+      
+      .member-card__main {
+        flex: 50% 1 1;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        text-align: left;
+        gap: .5rem;
+        padding: 1rem;
+        
+        .member-card__name {
+          text-transform: capitalize;
+          font-weight: 400;
+        }
+        
+        .member-card__job {
+          font-size: .7em;
+          text-transform: capitalize;
+        }
+        
+        .member-card__description {
+          line-height: 1.5;
+          font-size: .65em;
+          margin-block-start: .4rem;
+        }
+        
+        .member-card__socials {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-block-start: .75rem;
+          color: var(--_accent-color);
+        }
+      }
+    }
+  }
+}
