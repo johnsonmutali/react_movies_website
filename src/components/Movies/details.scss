@@ -1,0 +1,128 @@
+.movie-container {
+  padding-inline: 4rem;
+  /* min-block-size: 100svh; */
+  display: flex;
+  flex-direction: column;
+  
+  .movie-container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-block-end: 3rem;
+    
+    .header__main {
+      display: grid;
+      gap: 1.25rem;
+      
+      .title {
+        font-size: clamp(3rem, 7vmin, 10rem);
+        font-weight: 450;
+        text-transform: capitalize;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+        line-height: 1;
+      }
+      
+      .release-and-cast {
+        display: grid;
+        gap: 1rem;
+        
+        .release {
+          font-size: 1rem;
+          opacity: .8;
+          font-weight: 300;
+          letter-spacing: 3px;
+        }
+        
+        .btn {
+          padding: .5rem 2rem;
+          letter-spacing: 2px;
+          font-size: .75rem;
+          text-transform: capitalize;
+          background-color: hsl(0 0% 0% / .2);
+          border: 1px solid var(--_accent-color);
+          outline: none;
+          display: inline;
+          inline-size: fit-content;
+          margin-block-start: 1rem;
+          
+          &:hover {
+            color: #000;
+            background-color: var(--_accent-color);
+          }
+        }
+      }
+    }
+    
+    .header__id {
+      font-size: 3em;
+      font-weight: 650;
+    }
+  }
+  
+  .hr {
+    inline-size: 100%;
+    block-size: 1px;
+    background-color: hsl(0 100% 100% / .4);
+    margin-block: 4rem;
+  }
+  
+  .movie-container__details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+    
+    
+    .thumbnail {
+      block-size: 15rem;
+      aspect-ratio: 1/1.5;
+    }
+    
+    .review-and-genre {
+      flex-basis: 35%;
+      
+      .review {
+        line-height: 1.5;
+        font-size: .85rem;
+      }
+      
+      .genres {
+        display: flex;
+        gap: 1rem;
+        margin-block-start: 1rem;
+        
+        .genre {
+          border: 1px solid #f3f3f3;
+          border-radius: 100vh;
+          font-size: .75rem;
+          line-height: 1;
+          padding: .6rem 1.5rem .45rem;
+        }
+      }
+    }
+    
+    .rating-and-vote {
+      align-self: flex-start;
+      margin-inline-start: auto;
+      inline-size: 10rem;
+      aspect-ratio: 1;
+      border: 6px solid var(--_accent-color);
+      border-radius: 50%;
+      font-size: .6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      .rating {
+        font-size: 3em;
+        font-weight: 650;
+      }
+      
+      .vote {
+        opacity: .8;
+      }
+    }
+  }
+}
