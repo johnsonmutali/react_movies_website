@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Layout, { searchAction } from "./components/Layout"
+import Layout from "./components/Layout"
 import Home from "./components/Home"
 import Movies, { moviesLoader } from "./components/Movies/Movies.jsx"
 import MoviesDetails, { moviesDetailsLoader } from "./components/Movies/MoviesDetails"
@@ -33,11 +33,7 @@ function App() {
 
     const router = createBrowserRouter(
         createRoutesFromElements(
-            <Route element={
-                <Layout
-                    onSearch={handleSearch}
-                    action={searchAction} />
-            }>
+            <Route element={<Layout onSearch={handleSearch} />}>
                 <Route path="/" element={<Home />} />
                 <Route
                     path="movies"
