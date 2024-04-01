@@ -3,7 +3,7 @@ import {
     NavLink,
     Outlet,
     Form,
-    redirect
+    useNavigate
 } from "react-router-dom";
 
 import {
@@ -27,8 +27,11 @@ import {
 
 
 const Layout = ({ onSearch }) => {
+    const navigate = useNavigate()
     const [query, setQuery] = useState("")
-
+    const handleSubmit = () => {
+        navigate("/movies")
+    }
     return (
         <div className="layout">
             <header>
@@ -52,9 +55,8 @@ const Layout = ({ onSearch }) => {
                     onSubmit={(e) => {
                         e.preventDefault()
                         onSearch(query)
-                    }}
-                    action="/layout"
-                >
+                        handleSubmit()
+                    }}>
                     <label
                         className="header-label"
                         htmlFor="searchbar"
@@ -165,7 +167,3 @@ const Layout = ({ onSearch }) => {
 }
 
 export default Layout
-
-export const searchAction = async ({ request }) => {
-    return redirect("/")
-}
