@@ -49,8 +49,7 @@ export const moviesDetailsLoader = async ({ params }) => {
   const { id } = params
   const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=0a37faeccee2b6ba9614f84e338a03ed`)
 
-  if (!res.ok) throw new Error("Oops! Something went wrong, could not fetch your movie")
+  if (!res.ok) throw new Error("Oops! Something wrong at movies details")
 
   return res.json()
 }
-

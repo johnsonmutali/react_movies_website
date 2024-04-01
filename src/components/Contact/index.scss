@@ -1,110 +1,113 @@
 .contact-us {
-  --color: hsl(163 47% 53% / 1);
-  --fs: .75rem;
-  
-  .header {
-    padding: 2rem 10rem 0;
+    --color: hsl(163 47% 53% / 1);
+    --fs: .75rem;
     
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 350;
-      line-height: 1;
+    .header {
+        padding: 2rem 10rem 0;
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 350;
+            line-height: 1;
+        }
     }
-  }
-  
-  .map-container {
-    position: relative;
-    inline-size: 60vw;
-    min-block-size: 75svh;
-    outline: 1px solid red;
-    padding-block: 1rem;
-    margin-inline: auto;
-    margin-block: 3.5rem;
     
-    .form {
-      position: absolute;
-      right: 5rem;
-      top: -2rem;
-      background-color: #f5f5f5;
-      padding: 1rem;
-      z-index: 100;
-      
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-        min-inline-size: 25rem;
+    .map-container {
+        position: relative;
+        inline-size: 60vw;
+        min-block-size: 75svh;
+        outline: 1px solid red;
+        padding-block: 1rem;
+        margin-inline: auto;
+        margin-block: 3.5rem;
+        isolation: isolate;
         
-        input,
-        textarea {
-          outline: none;
-          border: 1px solid #000;
-          background-color: transparent;
-          padding: .6rem;
-          caret-color: #000;
-          color: #000;
-          font-size: .75em;
-        }
-        
-        textarea {
-          min-block-size: 5rem;
-        }
-        
-        button {
-          background-color: #000;
-          color: #f5f5f5;
-          font-size: .75em;
-          display: block;
-          margin-inline-start: auto;
-          margin-inline-end: -1rem;
-          padding: .65rem 3.5rem;
-          border: 1px solid #000;
-          text-transform: capitalize;
-          
-          &:hover {
+        .form {
+            position: absolute;
+            right: 5rem;
+            top: -2rem;
             background-color: #f5f5f5;
-            color: #000;
-          }
+            padding: 1rem;
+            z-index: 100;
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+                min-inline-size: 25rem;
+                
+                
+                input,
+                textarea {
+                    outline: none;
+                    border: 1px solid #000;
+                    background-color: transparent;
+                    padding: .6rem;
+                    caret-color: #000;
+                    color: #000;
+                    font-size: .75em;
+                }
+                
+                textarea {
+                    min-block-size: 5rem;
+                }
+                
+                button {
+                    background-color: #000;
+                    color: #f5f5f5;
+                    font-size: .75em;
+                    display: block;
+                    margin-inline-start: auto;
+                    margin-inline-end: -1rem;
+                    padding: .65rem 3.5rem;
+                    border: 1px solid #000;
+                    text-transform: capitalize;
+                    
+                    &:hover {
+                        background-color: #f5f5f5;
+                        color: #000;
+                    }
+                }
+            }
         }
-      }
+        
+        .map {
+            /* overflow: hidden; */
+            position: absolute;
+            inset: 0;
+            z-index: -909;
+            overflow: hidden;
+        }
+        
+        .contacts {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            inline-size: 100%;
+            display: flex;
+            align-items: stretch;
+            gap: 5rem;
+            font-size: .75em;
+            padding: 2rem;
+            background-color: hsl(0 100% 100% / .2);
+            backdrop-filter: blur(1rem);
+            
+            
+            h3 {
+                text-transform: capitalize;
+                font-weight: 500;
+                font-size: 1.25em;
+                line-height: 1.6;
+                margin-block-end: .5rem;
+                color: #000;
+            }
+            
+            
+            p {
+                color: #000;
+                line-height: 1.6;
+            }
+        }
     }
-    
-    .map {
-      /* overflow: hidden; */
-      position: absolute;
-      inset: 0;
-      z-index: 909;
-    }
-    
-    .contacts {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      inline-size: 100%;
-      display: flex;
-      align-items: stretch;
-      gap: 5rem;
-      font-size: .75em;
-      padding: 2rem;
-      background-color: hsl(0 100% 100% / .2);
-      backdrop-filter: blur(1rem);
-      
-      
-      h3 {
-        text-transform: capitalize;
-        font-weight: 500;
-        font-size: 1.25em;
-        line-height: 1.6;
-        margin-block-end: .5rem;
-        color: #000;
-      }
-      
-      
-      p {
-        color: #000;
-        line-height: 1.6;
-      }
-    }
-  }
 }
