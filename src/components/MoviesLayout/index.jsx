@@ -1,7 +1,6 @@
 import "./index.scss";
 import {
   NavLink,
-  Outlet,
   useLoaderData
 } from "react-router-dom";
 import { Hamburger } from "../Icons.jsx"
@@ -18,7 +17,8 @@ const MoviesLayout = () => {
             {
               genres.map(genre => (
                 <li className="sidebar__item" key={genre.id}>
-                  <NavLink to={genre.name}>{genre.name}</NavLink>
+                  <NavLink to={genre.name}>{genre.name}
+                  </NavLink>
                 </li>
               ))
             }
