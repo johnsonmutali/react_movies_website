@@ -1,12 +1,16 @@
 .movie-container {
     padding: 5rem 10vw 2rem;
-    min-block-size: 100svh;
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: hsl(0 0% 0% / .8);
     background-blend-mode: multiply;
+    
+    
+    .movie-container__main {
+        min-block-size: 100svh;
+    }
     
     .movie-container__header {
         display: flex;
