@@ -3,10 +3,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
-    padding: 5rem 10vw;
+    padding: 10rem 10vw 5rem;
     
     .genre__card {
-        outline: 1px solid red;
+        aspect-ratio: 1 / 1.689;
+        outline: 1px solid hsl(0 100% 100% / .4);
         padding: 2rem;
         text-align: center;
-    }}
+        font-size: 3em;
+        font-weight: 200;
+        display: grid;
+        place-items: center;
+    }
+}
