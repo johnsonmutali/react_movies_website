@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 
 export default function Footer() {
+    
     return (
         <div className="footer">
             <div className="pages footer__section">
