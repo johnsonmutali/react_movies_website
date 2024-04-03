@@ -3,6 +3,7 @@ import Footer from "../Footer"
 import { useLoaderData, Link, useActionData } from "react-router-dom"
 import { useState, useEffect } from "react"
 
+
 const apiKey = "api_key=0a37faeccee2b6ba9614f84e338a03ed";
 const apiURL = "https://api.themoviedb.org/3/movie/popular?" + apiKey;
 const imgUrl = "https://image.tmdb.org/t/p/w500";
@@ -11,7 +12,6 @@ const imgUrl = "https://image.tmdb.org/t/p/w500";
 export default function Movies({ query }) {
     const defaultMovies = useLoaderData().results
     const [movies, setMovies] = useState([]);
-
 
     useEffect(() => {
         if (query) {
