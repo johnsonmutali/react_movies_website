@@ -1,0 +1,107 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: .7em;
+    gap: 2rem;
+    position: relative;
+    padding: 3rem 10vw;
+    
+    
+    p {
+      line-height: 1.4;
+    }
+    
+    .footer__title {
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      font-weight: 450;
+      color: var(--_accent-color);
+      padding-block: .5rem;
+    }
+    
+    .footer__item {
+      a {
+        display: block;
+        padding-block: .5rem;
+        text-transform: capitalize;
+      }
+      
+      a:hover,
+      a.active {
+        color: var(--_accent-color);
+      }
+    }
+    
+    .cta {
+      p {
+        line-height: 1.4;
+        font-size: .7em;
+      }
+      
+      .footer__form {
+        position: relative;
+        inline-size: 100%;
+        padding-block: 1rem;
+        display: grid;
+        gap: .5rem;
+        
+        input {
+          position: relative;
+          inline-size: 100%;
+          padding: 1rem;
+          caret-color: var(--_accent-color);
+          color: var(--_accent-color);
+          background-color: transparent;
+          border: 1px solid var(--_accent-color);
+          outline: none;
+          font-size: .7rem;
+        }
+        
+        .btn {
+          display: block;
+          text-align: center;
+          padding: 1rem;
+          color: #f5f5f5;
+          background-color: var(--_accent-color);
+          text-transform: capitalize;
+          letter-spacing: 2px;
+          font-weight: 400;
+          font-size: .7rem;
+          outline: none;
+          border: 1px solid var(--_accent-color);
+          
+          &:hover {
+            color: var(--_accent-color);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    
+    
+    .socials {
+      flex-basis: 25%;
+      display: grid;
+      gap: 1rem;
+      
+      .icons {
+        padding: .5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        
+        .fab {
+          font-size: 2rem;
+        }
+      }
+      
+      .socials__copy-right {
+        
+        .highlight {
+          color: var(--_accent-color);
+        }
+      }
+    }
+  }
