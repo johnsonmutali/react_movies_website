@@ -1,4 +1,6 @@
 import "./index.scss";
+import Footer from "../Footer"
+
 import {
     NavLink,
     useLoaderData
@@ -7,18 +9,23 @@ import {
 export default function Genre() {
     const genres = useLoaderData().genres
     return (
-        <div className="genre">
-            {
-                genres.map(genre => (
-                    <div className="genre__card"
-                        key={genre.id}>
-                        <NavLink to={genre.id.toString()}>
-                            {genre.name}
+        <>
+            <div className="genre">
+                {
+                    genres.map(genre => (
+                        <NavLink
+                            className="genre__card"
+                            to={genre.id.toString()}
+                            key={genre.id}>
+                            <p>
+                                {genre.name}
+                            </p>
                         </NavLink>
-                    </div>
-                ))
-            }
-        </div>
+                    ))
+                }
+            </div>
+            <Footer />
+        </>
     )
 }
 

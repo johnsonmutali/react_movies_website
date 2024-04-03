@@ -1,11 +1,12 @@
 .genre {
+    min-block-size: 100svh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
+    padding: 5rem 10vw;
     
     .genre__card {
         outline: 1px solid red;
         padding: 2rem;
         text-align: center;
-    }
-}
+    }}

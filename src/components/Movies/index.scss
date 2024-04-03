@@ -1,53 +1,54 @@
 .movies {
-  --_accent-color: hsl(163 47% 63% / 1);
-  position: relative;
-  inline-size: 100%;
-  
-  .movies-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 2rem;
-    block-size: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    .movie {
-      position: relative;
-      box-shadow: 0 0 4rem hsl(0 100% 100% / .1);
-      
-      .movie__thumbnail {
-        inline-size: 100%;
-        aspect-ratio: 1/1.5;
-      }
-      
-      .movie__details {
-        padding-block: .75rem;
-        
-        h2 {
-          font-size: .9em;
-          font-weight: 500;
-          text-transform: capitalize;
-          letter-spacing: 2px;
-          word-spacing: 3px;
-        }
-      }
-      
-      .rating {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        inline-size: 1.8rem;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background-color: #f5f5f5;
-        color: #000;
+    --_accent-color: hsl(163 47% 63% / 1);
+    position: relative;
+    inline-size: 100%;
+    padding: 5rem 10vw;
+    
+    .movies-container {
         display: grid;
-        place-items: center;
-        font-size: .4em;
-        font-weight: 550;
-        box-shadow: 0 0 3rem hsl(0 0% 0%);
-      }
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 2rem;
+        block-size: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
+        .movie {
+            position: relative;
+            box-shadow: 0 0 4rem hsl(0 100% 100% / .1);
+            
+            .movie__thumbnail {
+                inline-size: 100%;
+                aspect-ratio: 1/1.5;
+            }
+            
+            .movie__details {
+                padding-block: .75rem;
+                
+                h2 {
+                    font-size: .9em;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    letter-spacing: 2px;
+                    word-spacing: 3px;
+                }
+            }
+            
+            .rating {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                inline-size: 1.8rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                background-color: #f5f5f5;
+                color: #000;
+                display: grid;
+                place-items: center;
+                font-size: .4em;
+                font-weight: 550;
+                box-shadow: 0 0 3rem hsl(0 0% 0%);
+            }
+        }
     }
-  }
 }
