@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Layout from "./components/Layout"
 import Home from "./components/Home"
@@ -25,19 +24,13 @@ import {
 
 
 function App() {
-    const [searchQuery, setSearchQuery] = useState("")
-
-    const handleSearch = query => {
-        setSearchQuery(query)
-    }
-
     const router = createBrowserRouter(
         createRoutesFromElements(
-            <Route element={<Layout onSearch={handleSearch} />}>
+            <Route element={<Layout />}>
                 <Route path="/" element={<Home />} />
                 <Route
                     path="movies"
-                    element={<Movies query={searchQuery} />}
+                    element={<Movies />}
                     loader={moviesLoader} />
                 <Route
                     path="movies/:id"

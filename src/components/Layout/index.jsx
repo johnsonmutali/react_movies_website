@@ -2,7 +2,6 @@ import "./index.scss";
 import {
     NavLink,
     Outlet,
-    Form,
     useNavigate
 } from "react-router-dom";
 
@@ -12,10 +11,10 @@ import {
 
 import Dp from "../../assets/images/hyde.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Logo, Search } from "../Icons.jsx"
+import { Logo } from "../Icons.jsx"
 
 
-const Layout = ({ onSearch }) => {
+const Layout = () => {
     const navigate = useNavigate()
     const [query, setQuery] = useState("")
     const handleSubmit = () => {
@@ -37,28 +36,7 @@ const Layout = ({ onSearch }) => {
                     <NavLink to="about">about</NavLink>
                     <NavLink to="contact">contact</NavLink>
                 </div>
-                <Form
-                    className="header-form"
-                    method="get"
-                    name="search"
-                    onSubmit={(e) => {
-                        e.preventDefault()
-                        onSearch(query)
-                        handleSubmit()
-                    }}>
-                    <label
-                        className="header-label"
-                        htmlFor="searchbar"
-                    ><button className="btn search-btn" type="submit">
-                            <Search /></button></label>
-                    <input
-                        id="searchbar"
-                        name="search"
-                        type="text"
-                        placeholder="search for a movie"
-                        onChange={e => setQuery(e.target.value)}
-                    />
-                </Form>
+
                 <div className="dp img-container">
                     <img
                         className="dp__img"

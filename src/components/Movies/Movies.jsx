@@ -3,23 +3,29 @@ import "./index.scss"
 import Footer from "../Footer"
 import MoviesList from "./MoviesList.jsx"
 
-//hooks
-import { useLoaderData, Link, useActionData } from "react-router-dom"
+//react
+import { useLoaderData, Link, useActionData, Form } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { Search } from "../Icons.jsx"
 
 //tmdb
 const apiKey = "api_key=0a37faeccee2b6ba9614f84e338a03ed";
 const apiURL = "https://api.themoviedb.org/3/movie/popular?" + apiKey;
 const imgUrl = "https://image.tmdb.org/t/p/w500";
 
-
-export default function Movies({ query }) {
+export default function Movies() {
+    const [query, setQuery] = useState("")
+    const [search, setSearch] = useState("")
+    const [movies, setMovies] = useState([])
     const defaultMovies = useLoaderData().results
-    const [movies, setMovies] = useState([]);
+
+    const handleSubmit = () => {
+        setSearch(query)
+    }
 
     useEffect(() => {
-        if (query) {
-            fetch(`https://api.themoviedb.org/3/search/movie?api_key=0a37faeccee2b6ba9614f84e338a03ed&query=${query}`)
+        if (search) {
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=0a37faeccee2b6ba9614f84e338a03ed&query=${search}`)
                 .then(res => {
                     if (!res.ok) {
                         console.log("no movies")
@@ -33,9 +39,30 @@ export default function Movies({ query }) {
         } else {
             setMovies(defaultMovies)
         }
-    }, [query])
+    }, [search])
     return (
         <>
+            <Form
+                className="header-form"
+                method="get"
+                name="search"
+                onSubmit={(e) => {
+                    e.preventDefault()
+                    handleSubmit()
+                }}>
+                <label
+                    className="header-label"
+                    htmlFor="searchbar"
+                ><button className="btn search-btn" type="submit">
+                        <Search /></button></label>
+                <input
+                    id="searchbar"
+                    name="search"
+                    type="text"
+                    placeholder="search for a movie"
+                    onChange={e => setQuery(e.target.value)}
+                />
+            </Form>
             <MoviesList
                 movies={movies}
                 title_type={"title"}
