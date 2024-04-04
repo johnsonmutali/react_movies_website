@@ -13,13 +13,13 @@
         padding-inline: 15vw 3rem;
         max-block-size: 10rem;
         position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+        top: 0;
+        left: 0;
+        z-index: 100;
         display: flex;
         align-items: center;
-        background-color: hsl(0 0% 0% / .2);
-        backdrop-filter: blur(2rem);
+        /*background-color: hsl(0 0% 0% / .2);
+        backdrop-filter: blur(2rem);*/
         
         .logo {
             display: inline-block;

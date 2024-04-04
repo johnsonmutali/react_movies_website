@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 
 const imgUrl = "https://image.tmdb.org/t/p/w500";
 
+export function Searchbar() {
+
+}
+
 export default function MovieList({ movies, title_type, linkDestination }) {
     return (
         <div className="movies">

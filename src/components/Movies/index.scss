@@ -1,8 +1,60 @@
+.header-form {
+    --_spacer: 10vw;
+    margin: 10rem 10vw 0;
+    display: block;
+    margin-inline-start: auto;
+    position: relative;
+    inline-size: calc(100% - (var(--_spacer) * 2));
+    overflow: hidden;
+    block-size: 2.5rem;
+    border: 1px solid hsl(0 100% 100% / .1);
+    
+    input {
+        position: absolute;
+        inset: 0;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: 1rem;
+        color: inherit;
+        caret-color: inherit;
+        text-transform: capitalize;
+        font-size: 75%;
+    }
+    
+    label {
+        z-index: 100;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: .25rem 1rem;
+        background-color: hsl(0 0% 0% / .2);
+        border-radius: 100vh;
+        display: grid;
+        place-items: center;
+        
+        .search-btn {
+            padding: .2rem 1rem;
+            background-color: hsl(0 100% 100% / .2);
+            backdrop-filter: blur(1rem);
+            outline: none;
+            border: none;
+            border-radius: 100vh;
+        }
+        
+        .bi {
+            inline-size: 1rem;
+            block-size: 1rem;
+        }
+    }
+}
+
 .movies {
     --_accent-color: hsl(163 47% 63% / 1);
     position: relative;
     inline-size: 100%;
-    padding: 10rem 10vw 5rem;
+    padding: 5rem 10vw;
     
     .movies-container {
         display: grid;
