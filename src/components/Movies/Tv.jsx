@@ -22,7 +22,6 @@ export default function Tv() {
 
     const handleSubmit = () => {
         setSearch(query)
-        alert(query)
     }
 
     useEffect(() => {
