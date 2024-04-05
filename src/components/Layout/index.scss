@@ -10,13 +10,14 @@
         font-size: .7em;
         inline-size: 100%;
         padding-block: 1rem;
-        padding-inline: 15vw 3rem;
+        padding-inline: 10vw;
         max-block-size: 10rem;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 100;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         background-color: hsl(0 0% 0% / .2);
         backdrop-filter: blur(2rem);

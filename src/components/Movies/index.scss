@@ -60,9 +60,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         gap: 2rem;
-        block-size: 100vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
         
         .movie {
             position: relative;
