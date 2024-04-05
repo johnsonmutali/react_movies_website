@@ -37,9 +37,11 @@ export default function Movies() {
                     setMovies(data.results)
                 })
         } else {
-            setMovies(defaultMovies)
+                setMovies(defaultMovies)
         }
     }, [search])
+
+    if (movies === 0) return null
     return (
         <>
             <Form
