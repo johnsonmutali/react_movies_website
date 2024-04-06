@@ -1,6 +1,6 @@
 .home {
   --_accent-color: hsl(163 47% 63% / 1);
-  block-size: 100svh;
+  min-block-size: 100svh;
   position: relative;
   
   .landing-slider {
@@ -18,11 +18,11 @@
       .landing_movie {
         position: absolute;
         top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 3rem;
+        transform: translateY(-50%);
         inline-size: fit-content;
         display: grid;
-        gap: 5rem;
+        gap: 1rem;
         
         .movie__title {
           font-size: 3em;
@@ -36,6 +36,8 @@
           align-items: center;
           gap: 5rem;
           
+          font-size: .8em;
+          
           .movie__res {
             padding: .15rem .5rem;
             text-transform: uppercase;
@@ -46,6 +48,90 @@
           }
         }
       }
+    }
+  }
+  
+  .landing_textarea {
+    padding: 5rem 10vw;
+    max-inline-size: 50vw;
+    
+    h2 {
+      font-size: 1.5em;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding-block: 1rem;
+    }
+    
+    h4 {
+      font-size: 1.2em;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding-block: 1rem;
+    }
+    
+    p {
+      line-height: 1.6;
+      padding-block: .5rem;
+    }
+  }
+  
+  .landing_explore {
+    padding: 5rem 10vw;
+    
+    
+    h2 {
+      font-size: 1.5em;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding-block: 1rem;
+    }
+    
+    p {
+      line-height: 1.6;
+      padding-block: .5rem;
+      max-inline-size: 65vw;
+    }
+    
+    .landing_link {
+      display: inline-block;
+      padding: 1.25rem 2rem;
+      margin-block: 1rem;
+      border: 1px solid var(--_accent-color);
+      text-transform: capitalize;
+      word-spacing: 4px;
+      font-weight: 400;
+    }
+  }
+  
+  .landing_movies-page {
+    padding: 5rem 10vw;
+    
+    
+    h2 {
+      font-size: 1.5em;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding-block: 1rem;
+    }
+    
+    p {
+      line-height: 1.6;
+      padding-block: .5rem;
+      max-inline-size: 65vw;
+    }
+    
+    .landing_link {
+      display: inline-block;
+      padding: 1.25rem 2rem;
+      margin-block: 1rem;
+      border: 1px solid var(--_accent-color);
+      text-transform: capitalize;
+      word-spacing: 4px;
+      font-weight: 400;
     }
   }
 }

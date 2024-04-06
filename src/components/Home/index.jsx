@@ -2,13 +2,15 @@ import "./index.scss"
 
 //react
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 //pages
 import Footer from "../Footer"
 
+
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Pagination } from "swiper/modules"
+import { EffectCoverflow, Autoplay } from "swiper/modules"
 
 import "swiper/scss"
 import "swiper/scss/effect-coverflow"
@@ -51,8 +53,13 @@ function Home() {
             modifier: 1,
             slideShadow: true
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          speed={1000}
+          loop={true}
+          modules={[EffectCoverflow, Autoplay]}
           className="landing-slider"
         >
           {
@@ -84,6 +91,98 @@ function Home() {
             ))
           }
         </Swiper>
+        <div className="landing_textarea">
+          <h2>filamu</h2>
+          <h4>explore movies online for free</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque.</p>
+
+        </div>
+        <div className="landing_explore">
+          <h2>explore different movie categories</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque. Ut pulvinar leo enim, a
+            dictum erat posuere et.</p>
+          <Link
+            to="/movies"
+            className="landing_link">
+            browse currently trending films
+          </Link>
+        </div>
+        <div className="landing_explore">
+          <h2>explore trending shows</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque. Ut pulvinar leo enim, a
+            dictum erat posuere et.</p>
+          <Link
+            to="/tv"
+            className="landing_link">
+            browse currently trending shows
+          </Link>
+        </div>
+        <div className="landing_explore">
+          <h2>explore different movie categories</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
+            amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
+            tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
+            dictum in. Donec id ligula non enim sagittis accumsan. Phasellus
+            vulputate porta dignissim. Aliquam erat volutpat. Donec eu eros sit
+            amet urna ultricies malesuada et vitae tellus. Pellentesque
+            scelerisque porta libero quis scelerisque. Ut pulvinar leo enim, a
+            dictum erat posuere et.</p>
+          <Link
+            to="/genre"
+            className="landing_link">
+            browse different categories
+          </Link>
+        </div>
       </div >
       <Footer />
     </>
