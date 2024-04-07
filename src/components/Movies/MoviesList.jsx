@@ -7,29 +7,29 @@ export function Searchbar() {
 }
 
 export default function MovieList({ movies, title_type, linkDestination }) {
-    return (
-        <div className="movies">
-            <div className="movies-container">
-                {movies.map(movie => (
-                    <Link to={linkDestination + movie.id.toString()} key={movie.id}>
-                        <div className="movie" key={movie.id}>
-                            <div className="movie__thumbnail img-container">
-                                <img src={imgUrl + movie.poster_path}
-                                    className="img" alt={
-                                        movie.title_type + " poster"
-                                    } />
-                            </div>
-                            <div className="movie__details">
-                                <h2>{movie.title_type}</h2>
-                            </div>
-                            <span className="rating">{
-                                Math.round(movie.vote_average * 10) / 10
-                            }</span>
-                        </div>
-                    </Link>
-                ))}
+  return (
+    <div className="movies">
+      <div className="movies-container">
+        {movies.map(movie => (
+          <Link to={linkDestination + movie.id.toString()} key={movie.id}>
+            <div className="movie" key={movie.id}>
+              <div className="movie__thumbnail img-container">
+                <img src={imgUrl + movie.poster_path}
+                  className="img" alt={
+                    movie.title_type + " poster"
+                  } />
+              </div>
+              <div className="moviesDetails">
+                {movie.title_type}
+              </div>
+              <span className="moviesRating">{
+                Math.round(movie.vote_average * 10) / 10
+              }</span>
             </div>
-        </div >
-    );
+          </Link>
+        ))}
+      </div>
+    </div >
+  );
 };
 

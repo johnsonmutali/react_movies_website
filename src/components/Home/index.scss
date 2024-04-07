@@ -5,7 +5,7 @@
   
   .landing-slider {
     
-    .landing-slider__card {
+    .landing-slider-card {
       inline-size: calc(100vw - 20rem);
       block-size: 100svh;
       background-color: hsl(0 0% 0% / .85);
@@ -15,7 +15,7 @@
       background-position: center;
       position: relative;
       
-      .landing_movie {
+      .landing-movie {
         position: absolute;
         top: 65%;
         left: 3rem;
@@ -24,13 +24,13 @@
         display: grid;
         gap: 1rem;
         
-        .movie__title {
+        .movie-title {
           font-size: 3em;
           font-weight: 250;
           text-align: center;
         }
         
-        .movie__details {
+        .movie-details {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -38,7 +38,7 @@
           
           font-size: .8em;
           
-          .movie__res {
+          .movie-res {
             padding: .15rem .5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -51,11 +51,11 @@
     }
   }
   
-  .landing_textarea {
+  .landing-textarea {
     padding: 5rem 10vw;
     max-inline-size: 50vw;
     
-    h2 {
+    .landing-textarea__title {
       font-size: 1.5em;
       font-weight: 800;
       letter-spacing: 3px;
@@ -63,7 +63,7 @@
       padding-block: 1rem;
     }
     
-    h4 {
+    .landing-textarea__sub-title {
       font-size: 1.2em;
       font-weight: 300;
       letter-spacing: 3px;
@@ -71,17 +71,17 @@
       padding-block: 1rem;
     }
     
-    p {
+    .landing-textarea__text {
       line-height: 1.6;
       padding-block: .5rem;
     }
   }
   
-  .landing_explore {
+  .landing-explore {
     padding: 5rem 10vw;
     
     
-    h2 {
+    .landing-explore__title {
       font-size: 1.5em;
       font-weight: 800;
       letter-spacing: 3px;
@@ -89,13 +89,13 @@
       padding-block: 1rem;
     }
     
-    p {
+    .landing-explore__text {
       line-height: 1.6;
       padding-block: .5rem;
       max-inline-size: 65vw;
     }
     
-    .landing_link {
+    .landing-link {
       display: inline-block;
       padding: 1.25rem 2rem;
       margin-block: 1rem;
@@ -106,7 +106,7 @@
     }
   }
   
-  .landing_movies-page {
+  .landing-movies-page {
     padding: 5rem 10vw;
     
     
@@ -124,7 +124,7 @@
       max-inline-size: 65vw;
     }
     
-    .landing_link {
+    .landing-link {
       display: inline-block;
       padding: 1.25rem 2rem;
       margin-block: 1rem;
