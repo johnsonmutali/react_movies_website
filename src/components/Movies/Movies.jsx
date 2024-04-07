@@ -40,7 +40,7 @@ export default function Movies() {
                 setMovies(defaultMovies)
         }
     }, [search])
-
+console.log(movies)
     if (movies === 0) return null
     return (
         <>

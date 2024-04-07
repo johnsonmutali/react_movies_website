@@ -31,7 +31,7 @@ function Home() {
           throw new Error('Failed to fetch movies');
         }
         const data = await response.json();
-        setMovies(data.results.slice(0, 5));
+        setMovies(data.results.slice(0, 10));
       } catch (error) { console.error(error); }
     }; fetchMovies();
   }, []);
@@ -65,36 +65,36 @@ function Home() {
           {
             movies.map(movie => (
               <SwiperSlide
-                className="landing-slider__card"
+                className="landing-slider-card"
                 key={movie.id}
                 style={{
                   backgroundImage:
                     `url(${imgUrl}${movie.backdrop_path})`
                 }}>
-                <div className="landing_movie">
-                  <h1 className="movie__title">
+                <div className="landing-movie">
+                  <h1 className="movie-title">
                     {movie.title}
                   </h1>
-                  <div className="movie__details">
-                    <span className="movie__res">hd</span>
-                    <span className="movie__rating">{
+                  <div className="movie-details">
+                    <span className="movie-res">hd</span>
+                    <span className="movie-rating">{
                       Math.round(movie.vote_average * 10) / 10
                     }</span>
-                    <span className="movie__release">{
+                    <span className="movie-release">{
                       movie.release_date
                     }</span>
                   </div>
-                  <div className="movie__genre">
+                  <div className="movie-genre">
                   </div>
                 </div>
               </SwiperSlide>
             ))
           }
         </Swiper>
-        <div className="landing_textarea">
-          <h2>filamu</h2>
-          <h4>explore movies online for free</h4>
-          <p>
+        <div className="landing-textarea">
+          <h2 className="landing-textarea__title">filamu</h2>
+          <h4 className="landing-textarea__sub-title">explore movies online for free</h4>
+          <p className="landing-textarea__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
             pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
             amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
@@ -132,9 +132,9 @@ function Home() {
             scelerisque porta libero quis scelerisque.</p>
 
         </div>
-        <div className="landing_explore">
-          <h2>explore different movie categories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+        <div className="landing-explore">
+          <h2 className="landing-explore__title">explore different movie categories</h2>
+          <p className="landing-explore__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
             pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
             amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
             tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
@@ -145,13 +145,13 @@ function Home() {
             dictum erat posuere et.</p>
           <Link
             to="/movies"
-            className="landing_link">
+            className="landing-link">
             browse currently trending films
           </Link>
         </div>
-        <div className="landing_explore">
-          <h2>explore trending shows</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+        <div className="landing-explore">
+          <h2 className="landing-explore__title">explore trending shows</h2>
+          <p className="landing-explore__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
             pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
             amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
             tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
@@ -162,13 +162,13 @@ function Home() {
             dictum erat posuere et.</p>
           <Link
             to="/tv"
-            className="landing_link">
+            className="landing-link">
             browse currently trending shows
           </Link>
         </div>
-        <div className="landing_explore">
-          <h2>explore different movie categories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+        <div className="landing-explore">
+          <h2 className="landing-explore__title">explore different movie categories</h2>
+          <p className="landing-explore__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
             pharetra tellus, sit amet ullamcorper massa. Ut pulvinar, dolor sit
             amet sagittis laoreet, arcu lorem pretium velit, sit amet interdum
             tellus est vitae leo. Sed laoreet pretium nunc, sed fringilla lorem
@@ -179,7 +179,7 @@ function Home() {
             dictum erat posuere et.</p>
           <Link
             to="/genre"
-            className="landing_link">
+            className="landing-link">
             browse different categories
           </Link>
         </div>
