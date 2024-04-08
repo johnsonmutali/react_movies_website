@@ -1,32 +1,40 @@
+//pages
 import './App.css'
 import Layout from "./components/Layout"
 import Home from "./components/Home"
 import Movies, { moviesLoader } from "./components/Movies/Movies.jsx"
 import MoviesDetails, { moviesDetailsLoader } from "./components/Movies/MoviesDetails"
-
 import Genre, { getGenreLoader } from "./components/Genre"
 import GenreMovies, { genreMoviesLoader } from "./components/Genre/GenreMovies"
-import ErrorElement from "./components/Errors/ErrorElement"
-import ErrorNotFound from "./components/Errors/ErrorNotFound"
+import Errors from "./components/Errors"
 import Tv, { tvLoader } from "./components/Movies/Tv.jsx"
 import TvDetails, { tvDetailsLoader } from
   "./components/Movies/TvDetails"
 import About from "./components/About"
 import Contact, { contactAction } from "./components/Contact"
 
-
+//react
 import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  Route
+  Route,
+  useRouteError
 } from "react-router-dom"
 
+
+function ErrorElement() {
+  const error = useRouteError()
+  return (
+    <Errors error={error} />)
+}
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<Layout />}>
+      <Route
+        element={<Layout />}
+        errorElement={<ErrorElement />}>
         <Route
           path="/"
           element={<Home />} />
@@ -63,7 +71,7 @@ function App() {
           path="contact"
           element={<Contact />}
           action={contactAction} />
-        <Route path="*" element={<ErrorNotFound />} />
+        <Route path="*" element={<Errors />} />
       </Route>
     )
   )
