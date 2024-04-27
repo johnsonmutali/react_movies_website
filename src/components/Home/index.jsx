@@ -24,9 +24,9 @@ function Home() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const apiKey = '0a37faeccee2b6ba9614f84e338a03ed';
+        const apiKey = 'YOUR_API_KEY';
         const response = await
-          fetch(`https://api.themoviedb.org/3/movie/popular?api_key=0a37faeccee2b6ba9614f84e338a03ed`);
+          fetch(`https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY`);
         if (!response.ok) {
           throw new Error('Failed to fetch movies');
         }

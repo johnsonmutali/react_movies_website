@@ -10,27 +10,28 @@ const imgUrl = "https://image.tmdb.org/t/p/w500";
 
 
 export default function GenreMovies() {
-    const { id } = useParams()
-    const movies = useLoaderData().results
+  const { id } = useParams()
+  const movies = useLoaderData().results
 
-    return (
-        <>
-            <MoviesList
-                movies={movies}
-                title_type={"title"}
-                linkDestination={"/movies/"} />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <MoviesList
+        movies={movies}
+        title_type={"title"}
+        linkDestination={"/movies/"} />
+      <Footer />
+    </>
+  )
 }
 
 export const genreMoviesLoader = async ({ params }) => {
-    const { id } = params
+  const { id } = params
 
-    const res =
-        await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0a37faeccee2b6ba9614f84e338a03ed&with_genres=${id}`)
+  const res =
+    await
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=${id}`)
 
-    if (!res.ok) throw new Error("Counldnt fetch!")
+  if (!res.ok) throw new Error("Counldnt fetch!")
 
-    return res.json()
+  return res.json()
 }
