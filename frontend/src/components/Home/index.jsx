@@ -26,7 +26,7 @@ function Home() {
       try {
         const apiKey = 'YOUR_API_KEY';
         const response = await
-          fetch(`https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY`);
+          fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
         if (!response.ok) {
           throw new Error('Failed to fetch movies');
         }

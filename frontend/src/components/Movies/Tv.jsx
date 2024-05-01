@@ -9,7 +9,7 @@ import { useLoaderData, Link, Form } from "react-router-dom"
 import { Search } from "../Icons.jsx"
 
 //from tm
-const apiKey = "api_key=YOUR_API_KEY";
+const apiKey = `api_key=${process.env.API_KEY}`;
 const apiURL = "https://api.themoviedb.org/3/tv/popular?" + apiKey;
 const imgUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -26,7 +26,7 @@ export default function Tv() {
 
   useEffect(() => {
     if (search) {
-      fetch(`https://api.themoviedb.org/3/search/tv?api_YOUR_API_KEY&query=${search}`)
+      fetch(`https://api.themoviedb.org/3/search/tv${process.env.API_KEY}?&query=${search}`)
         .then(res => {
           if (!res.ok) throw new Error("couldnt fetch! tv.jsx")
           return res.json()

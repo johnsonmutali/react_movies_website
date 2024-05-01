@@ -9,7 +9,7 @@ import { useState, useEffect } from "react"
 import { Search } from "../Icons.jsx"
 
 //tmdb
-const apiKey = "api_key=YOUR_API_KEY";
+const apiKey = `api_key=${}`;
 const apiURL = "https://api.themoviedb.org/3/movie/popular?" + apiKey;
 const imgUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -25,7 +25,7 @@ export default function Movies() {
 
   useEffect(() => {
     if (search) {
-      fetch(`https://api.themoviedb.org/3/search/movie?api_key=YOUR_API_KEY&query=${search}`)
+      fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${search}`)
         .then(res => {
           if (!res.ok) {
             console.log("no movies")

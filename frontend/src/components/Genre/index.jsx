@@ -1,3 +1,4 @@
+
 import "./index.scss";
 import Footer from "../Footer"
 
@@ -31,7 +32,7 @@ export default function Genre() {
 
 export const getGenreLoader = async () => {
   const res = await
-    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key={YOUR_API_KEY}&language=en-US")
+    fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.API_KEY}&language=en-US`)
 
   if (!res.ok) throw new Error("whelps no genraaaas")
 

@@ -53,7 +53,7 @@ export default function TvDetails() {
 export const tvDetailsLoader = async ({ params }) => {
   const { id } = params
   const res = await
-    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=YOUR_API_KEY`)
+    fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=${}`)
 
   if (!res.ok) throw new Error("Oops! Something went wrong, could not fetch your movie")
 

@@ -29,7 +29,7 @@ export const genreMoviesLoader = async ({ params }) => {
 
   const res =
     await
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=${id}`)
+      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${id}`)
 
   if (!res.ok) throw new Error("Counldnt fetch!")
 
